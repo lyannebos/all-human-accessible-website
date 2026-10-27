@@ -23,3 +23,4 @@ De instructie van deze leertaak staat in [WIKI](https://github.com/fdnd-task/all
 
 ## Licentie
 This project is licensed under the terms of the [MIT license](./LICENSE).
+
