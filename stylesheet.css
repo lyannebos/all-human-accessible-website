@@ -1,4 +1,3 @@
-.filters {
     display: flex;
     overflow-x: scroll;
 
@@ -22,18 +21,16 @@
 }
 
 :root {
-    /* fonts */
     --font-titels: "rigid-square", sans-serif;
     --font-tekst: "Yrsa", serif;
 
-    /* kleuren */
     --tekst-kleur: #1d1a4d;
     --achtergrond: #f3f3f5;
     --lijn: #d8d8dd;
     --accent: #f5b945;
 }
 
-
+/* Body */
 
 body {
     margin: 0;
@@ -49,7 +46,7 @@ h3 {
     font-weight: 700;
 }
 
-
+/* Header */
 
 header {
     display: flex;
@@ -61,13 +58,13 @@ header {
 
 .logo {
     margin-right: auto;
-    
+
 }
 
 .logo img {
-  display: block;
-  width: 3.5em;
-  height: auto;
+    display: block;
+    width: 3.5em;
+    height: auto;
 }
 
 
@@ -89,19 +86,15 @@ header button img,
 
 
 
-
-/* MENU BUTTON */
 .menu-button {
     position: relative;
     z-index: 100;
     
 }
 
-/* als menu open is: kruisje tonen */
 header:has(.is-open) .menu-button img {
     content: url(../assets/kruisje.svg);
 }
-
 
 
 /* HET HOOFDMENU */
@@ -115,13 +108,11 @@ header:has(.is-open) .menu-button img {
     background-color: var(--achtergrond);
     translate: 100% 0%;
     transition: translate .3s;
-   
 }
 
-/* als menu open is */
+
 .hoofdmenu.is-open {
     translate: 0% 0%;
-    
 }
 
 .hoofdmenu ul {
@@ -139,9 +130,8 @@ header:has(.is-open) .menu-button img {
     font-size: 1.25em;
 }
 
+/* knop materiaal indienen */
 
-/* MATERIAAL INDIENEN    */
-/* gedeelde stijl voor mobiel en desktop */
 .materiaal,
 .materiaal-mobiel a {
     padding: .75em 1.5em;
@@ -156,7 +146,6 @@ header:has(.is-open) .menu-button img {
     display: inline-block;
 }
 
-/* desktopknop: op mobiel verbergen */
 .materiaal {
     display: none;
 }
@@ -170,13 +159,35 @@ header:has(.is-open) .menu-button img {
     font-weight: 700;
 }
 
+/* Filters */
 
+.filters {
+    display: flex;
+    overflow-x: scroll;
 
+    p {
+        text-align: center;
+        width: max-content;
+    }
 
-/* DESKTOP: als de browser minimaal 60em breed is */
+    .button-wrap {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    button {
+        width: 40px;
+        height: 40px;
+        padding: 2em;
+        border-radius: 100px;
+    }
+}
+
+/* Breed scherm */
+
 @media (min-width: 60em) {
 
-    /* header */
     header {
         padding: 1.5em 1em;
         border-bottom: 1px solid var(--lijn);
@@ -186,7 +197,6 @@ header:has(.is-open) .menu-button img {
         margin-right: 3em;
     }
 
-    /* hamburger en mobiele knop weg, desktopknop tonen */
     .menu-button,
     .materiaal-mobiel {
         display: none;
@@ -196,7 +206,6 @@ header:has(.is-open) .menu-button img {
         display: block;
     }
 
-    /* hoofdmenu in een rij */
     .hoofdmenu {
         position: static;
         translate: unset;
@@ -204,7 +213,7 @@ header:has(.is-open) .menu-button img {
         background: none;
         transition: none;
         flex: 1;
-       
+
     }
 
     .hoofdmenu ul {
