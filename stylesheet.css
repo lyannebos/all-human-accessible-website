@@ -129,13 +129,25 @@ header:has(.is-open) .menu-button img {
     display: none;
 }
 
+/* Breadcrumb */
 
+.breadcrumb {
+  padding: 0 0.5rem;
+}
 
+.breadcrumb ol {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  margin: 2rem;
+  padding: 0;
+  align-items: end;
+}
 
-/* BREADCRUMB EN PAGINERING */
-.breadcrumb .active,
-.pages .active {
-    font-weight: 700;
+.breadcrumb li:not(:last-child)::after {
+  display: inline-block;
+  margin: 0 0.25rem;
+  content: ">";
 }
 
 /* Filters */
