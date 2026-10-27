@@ -74,8 +74,11 @@ header button img,
 
 header:has(.is-open) .menu-button img {
     content: url(../assets/kruisje.svg);
+    width: 1.5em;
+    height: 1.5em;
 }
 
+/* Hoofdmenu */
 
 .hoofdmenu {
     position: fixed;
@@ -87,6 +90,7 @@ header:has(.is-open) .menu-button img {
     background-color: var(--achtergrond);
     translate: 100% 0%;
     transition: translate .3s;
+
 }
 
 
@@ -124,6 +128,7 @@ header:has(.is-open) .menu-button img {
 .materiaal-mobiel a {
     display: inline-block;
 }
+
 
 .materiaal {
     display: none;
