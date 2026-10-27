@@ -1,3 +1,11 @@
+html {
+  box-sizing: border-box;
+}
+
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+
 :root {
     --font-titels: "rigid-square", sans-serif;
     --font-tekst: "Yrsa", serif;
