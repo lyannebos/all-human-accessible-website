@@ -159,6 +159,38 @@ header:has(.is-open) .menu-button img {
   font-weight: 700;
 }
 
+/* Zoekbalk */
+
+.zoek-balk {
+  padding: 0 0.5rem;
+}
+
+.zoek-balk label {
+  display: block;
+}
+
+.zoek-balk span {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
+.zoek-balk input {
+  width: 100%;
+  padding: .75em 1em .75em 3em;
+  border: 1.5px solid var(--lijn);
+  appearance: none;
+  background-color: white;
+  background-image: url(../assets/zoeken-grijs.svg);
+  background-repeat: no-repeat;
+  background-position: 1em center;
+  background-size: 1.25em;
+  color: var(--tekst-kleur);
+}
+
 /* Filters */
 
 .filters {
