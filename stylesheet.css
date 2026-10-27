@@ -6,6 +6,8 @@
     --achtergrond: #f3f3f5;
     --lijn: #d8d8dd;
     --accent: #f5b945;
+    --kopje-rood: #b50111;
+}
 
 main {
   max-width: 75em;
