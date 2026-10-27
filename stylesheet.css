@@ -155,6 +155,10 @@ header:has(.is-open) .menu-button img {
   content: ">";
 }
 
+.breadcrumb .active {
+  font-weight: 700;
+}
+
 /* Filters */
 
 .filters {
