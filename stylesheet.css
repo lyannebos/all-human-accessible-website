@@ -222,12 +222,37 @@ header:has(.is-open) .menu-button img {
         align-items: center;
     }
 
-    button {
-        width: 40px;
-        height: 40px;
-        padding: 2em;
-        border-radius: 100px;
-    }
+/* lijst met categorieën */
+.filters ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: grid;
+    gap: .5em;
+}
+
+/* één categorieknop */
+.filters ul button {
+    display: flex;
+    align-items: center;
+    gap: .75em;
+    width: 100%;
+    padding: .5em;
+    border: none;
+    background: none;
+    font-family: inherit;
+    font-size: 1em;
+    color: inherit;
+    text-align: left;
+    cursor: pointer;
+}
+
+.filters ul button span {
+    flex-shrink: 0;
+    width: 3em;
+    height: 3em;
+    border-radius: 100px;
+    background-color: var(--lijn);
 }
 
 /* Breed scherm */
@@ -271,4 +296,42 @@ header:has(.is-open) .menu-button img {
     .hoofdmenu a {
         font-size: 1em;
     }
+
+    .filter-knop,
+    .sluit-knop {
+        display: none;
+    }
+
+    .filters {
+        display: block;
+        position: sticky;
+        inset: auto;
+        top: 0;
+        z-index: 10;
+        width: auto;
+        margin: 2em 0;
+        padding: 1em 0;
+        background-color: var(--achtergrond);
+    }
+
+    .filters ul {
+        display: flex;
+        gap: 1em;
+    }
+
+    .filters ul li {
+        flex: 1;
+    }
+
+    .filters ul button {
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+    }
+
+    .filters ul button span {
+        width: 4.5em;
+        height: 4.5em;
+    }
+
 }
