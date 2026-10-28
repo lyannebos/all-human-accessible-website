@@ -1,9 +1,6 @@
-html {
-  box-sizing: border-box;
-}
 
 *, *::before, *::after {
-  box-sizing: inherit;
+  box-sizing: border-box;
 }
 
 :root {
@@ -14,13 +11,14 @@ html {
     --achtergrond: #f3f3f5;
     --lijn: #d8d8dd;
     --accent: #f5b945;
-    --kopje-rood: #b50111;
+    --kopje-rood: #b52e3a;
+    --kopje-teal: #4fbbc2;
 }
 
 main {
-  max-width: 75em;
-  margin-inline: auto;
-  padding-inline: 1em;
+    max-width: 75em;
+    margin-inline: auto;
+    padding-inline: 1em;
 }
 
 /* Body */
@@ -67,7 +65,6 @@ header button {
     cursor: pointer;
 }
 
-
 header button img,
 .account img,
 .favorieten img {
@@ -75,8 +72,6 @@ header button img,
     width: 1.5em;
     height: 1.5em;
 }
-
-
 
 .menu-button {
     position: relative;
@@ -101,12 +96,11 @@ header:has(.is-open) .menu-button img {
     bottom: 0;
     left: 0;
     padding: 7em 1em 1em;
+    z-index: 90;
     background-color: var(--achtergrond);
     translate: 100% 0%;
     transition: translate .3s;
-
 }
-
 
 .hoofdmenu.is-open {
     translate: 0% 0%;
@@ -151,65 +145,93 @@ header:has(.is-open) .menu-button img {
 /* Breadcrumb */
 
 .breadcrumb {
-  padding: 0 0.5rem;
+    padding: 0 0.5rem;
 }
 
 .breadcrumb ol {
-  display: flex;
-  flex-wrap: wrap;
-  list-style: none;
-  margin: 2rem 0;
-  padding: 0;
-  align-items: end;
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    margin: 2rem 0;
+    padding: 0;
+    align-items: end;
 }
 
 .breadcrumb li:not(:last-child)::after {
-  display: inline-block;
-  margin: 0 0.25rem;
-  content: ">";
+    display: inline-block;
+    margin: 0 0.25rem;
+    content: ">";
 }
 
 .breadcrumb .active {
-  font-weight: 700;
+    font-weight: 700;
 }
 
 /* Zoekbalk */
 
 .zoek-balk {
-  padding: 0 0.5rem;
+    padding: 0 0.5rem;
 }
 
 .zoek-balk label {
-  display: block;
+    display: block;
 }
 
 .zoek-balk span {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  overflow: hidden;
-  clip-path: inset(50%);
-  white-space: nowrap;
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip-path: inset(50%);
+    white-space: nowrap;
 }
 
 .zoek-balk input {
-  width: 100%;
-  padding: .75em 1em .75em 3em;
-  border: 1.5px solid var(--lijn);
-  appearance: none;
-  background-color: white;
-  background-image: url(../assets/zoeken-grijs.svg);
-  background-repeat: no-repeat;
-  background-position: 1em center;
-  background-size: 1.25em;
-  color: var(--tekst-kleur);
+    width: 100%;
+    padding: .75em 1em .75em 3em;
+    border: 1.5px solid var(--lijn);
+    appearance: none;
+    background-color: white;
+    background-image: url(../assets/zoeken-grijs.svg);
+    background-repeat: no-repeat;
+    background-position: 1em center;
+    background-size: 1.25em;
+    color: var(--tekst-kleur);
 }
 
 /* Filters */
 
+/* ronde knop rechtsonder */
+.filter-knop {
+    position: fixed;
+    right: 1em;
+    bottom: 1em;
+    z-index: 50;
+    width: 3.5em;
+    height: 3.5em;
+    padding: 0;
+    border: none;
+    border-radius: 100px;
+    background: none;
+    cursor: pointer;
+}
+
+.filter-knop img {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+/* het paneel */
 .filters {
-    display: flex;
-    overflow-x: scroll;
+    inset: auto 0 0 0;
+    width: 100%;
+    max-height: 80vh;
+    margin: 0;
+    padding: 1em;
+    border: none;
+    background-color: var(--achtergrond);
+}
 
 /* kruisje rechtsboven in het paneel */
 .sluit-knop {
